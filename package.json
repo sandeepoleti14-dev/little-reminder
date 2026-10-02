@@ -1,0 +1,18 @@
+{
+  "name": "little-reminder",
+  "version": "0.2.0",
+  "description": "Little Reminder - tiny animated desktop reminder companion",
+  "main": "main.js",
+  "author": "bsandeep",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check main.js && node --check preload.js && node --check renderer.js && node --check companion.js"
+  },
+  "devDependencies": {
+    "electron": "^39.2.7"
+  },
+  "allowScripts": {
+    "electron@39.8.10": true
+  }
+}

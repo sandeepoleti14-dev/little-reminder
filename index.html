@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Reminder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+
+    <div class="brand">
+      <div class="logo">💧</div>
+
+      <div>
+        <h1>Little Reminder</h1>
+        <p>Your little companions for everyday life</p>
+      </div>
+    </div>
+
+    <div class="topActions">
+      <div class="creator">Created by bsandeep</div>
+      <button class="iconButton" title="Settings">⚙️</button>
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- GREETING -->
+    <section class="welcome">
+
+      <div class="welcomeText">
+
+        <span class="eyebrow">YOUR LITTLE WORLD</span>
+
+        <h2 id="greeting">Good Morning 👋</h2>
+
+        <p id="greetingMessage">
+          Your little companions are ready for today.
+        </p>
+
+      </div>
+
+      <div class="welcomeTime">
+
+        <span class="eyebrow">DEVICE TIME</span>
+
+        <strong id="deviceTime">--:--:--</strong>
+
+        <span id="todayDate">--</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- QUICK SUMMARY -->
+    <section class="summaryGrid">
+
+      <div class="summaryCard nextCard">
+
+        <div class="summaryIcon">⏰</div>
+
+        <div>
+          <span class="eyebrow">NEXT REMINDER</span>
+          <strong id="nextReminder">--</strong>
+          <p>Your next little nudge</p>
+        </div>
+
+      </div>
+
+
+      <div class="summaryCard">
+
+        <div class="summaryIcon">✨</div>
+
+        <div>
+          <span class="eyebrow">TODAY</span>
+          <strong id="progressText">0 / 6</strong>
+          <p>reminders completed</p>
+        </div>
+
+      </div>
+
+
+      <div class="summaryCard">
+
+        <div class="summaryIcon">🌱</div>
+
+        <div>
+          <span class="eyebrow">YOUR COMPANIONS</span>
+          <strong>6</strong>
+          <p>little helpers watching over you</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- REMINDERS -->
+    <section class="reminderSection">
+
+      <div class="sectionHeading">
+
+        <div>
+          <span class="eyebrow">TODAY'S ROUTINE</span>
+          <h3>Your Reminders</h3>
+          <p>Keep your everyday habits close.</p>
+        </div>
+
+        <button id="addReminder" class="addButton">
+          <span>＋</span>
+          Add Reminder
+        </button>
+
+      </div>
+
+
+      <div class="reminderGrid">
+
+
+        <!-- WATER -->
+        <article class="reminderCard waterReminder">
+
+          <div class="characterArea waterCharacter">
+            <div class="characterGlow"></div>
+            <div class="characterPlaceholder">🧜‍♀️</div>
+            <span class="characterBubble">💧</span>
+          </div>
+
+          <div class="reminderContent">
+
+            <div class="reminderTop">
+
+              <div>
+                <span class="reminderCategory">HYDRATION</span>
+                <h4>Water</h4>
+              </div>
+
+              <label class="switch">
+                <input id="enabled" type="checkbox">
+                <span></span>
+              </label>
+
+            </div>
+
+            <p class="reminderDescription">
+              Stay hydrated throughout the day.
+            </p>
+
+            <div class="reminderMeta">
+              <span>💧 Every <strong id="waterIntervalText">2 hours</strong></span>
+              <span>Next: <strong id="waterNext">--</strong></span>
+            </div>
+
+            <button class="editButton waterEdit">
+              Edit schedule
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- FOOD -->
+        <article class="reminderCard foodReminder">
+
+          <div class="characterArea foodCharacter">
+            <div class="characterGlow"></div>
+            <div class="characterPlaceholder">🍎</div>
+          </div>
+
+          <div class="reminderContent">
+
+            <div class="reminderTop">
+
+              <div>
+                <span class="reminderCategory">NUTRITION</span>
+                <h4>Food</h4>
+              </div>
+
+              <label class="switch">
+                <input type="checkbox" class="futureToggle">
+                <span></span>
+              </label>
+
+            </div>
+
+            <p class="reminderDescription">
+              Gentle reminders for your meals.
+            </p>
+
+            <div class="reminderMeta">
+              <span>🍎 Meal schedule</span>
+              <span>Not configured</span>
+            </div>
+
+            <button class="editButton futureButton">
+              Configure
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- SLEEP -->
+        <article class="reminderCard sleepReminder">
+
+          <div class="characterArea sleepCharacter">
+            <div class="characterGlow"></div>
+            <div class="characterPlaceholder">🌙</div>
+          </div>
+
+          <div class="reminderContent">
+
+            <div class="reminderTop">
+
+              <div>
+                <span class="reminderCategory">REST</span>
+                <h4>Sleep</h4>
+              </div>
+
+              <label class="switch">
+                <input type="checkbox" class="futureToggle">
+                <span></span>
+              </label>
+
+            </div>
+
+            <p class="reminderDescription">
+              Give your body time to slow down.
+            </p>
+
+            <div class="reminderMeta">
+              <span>🌙 Bedtime</span>
+              <span>Not configured</span>
+            </div>
+
+            <button class="editButton futureButton">
+              Configure
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- STUDY -->
+        <article class="reminderCard studyReminder">
+
+          <div class="characterArea studyCharacter">
+            <div class="characterGlow"></div>
+            <div class="characterPlaceholder">📚</div>
+          </div>
+
+          <div class="reminderContent">
+
+            <div class="reminderTop">
+
+              <div>
+                <span class="reminderCategory">FOCUS</span>
+                <h4>Study</h4>
+              </div>
+
+              <label class="switch">
+                <input type="checkbox" class="futureToggle">
+                <span></span>
+              </label>
+
+            </div>
+
+            <p class="reminderDescription">
+              Small study sessions, one step at a time.
+            </p>
+
+            <div class="reminderMeta">
+              <span>📚 Focus session</span>
+              <span>Not configured</span>
+            </div>
+
+            <button class="editButton futureButton">
+              Configure
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- EXERCISE -->
+        <article class="reminderCard exerciseReminder">
+
+          <div class="characterArea exerciseCharacter">
+            <div class="characterGlow"></div>
+            <div class="characterPlaceholder">🏃</div>
+          </div>
+
+          <div class="reminderContent">
+
+            <div class="reminderTop">
+
+              <div>
+                <span class="reminderCategory">MOVEMENT</span>
+                <h4>Exercise</h4>
+              </div>
+
+              <label class="switch">
+                <input type="checkbox" class="futureToggle">
+                <span></span>
+              </label>
+
+            </div>
+
+            <p class="reminderDescription">
+              A little movement can change the day.
+            </p>
+
+            <div class="reminderMeta">
+              <span>🏃 Activity</span>
+              <span>Not configured</span>
+            </div>
+
+            <button class="editButton futureButton">
+              Configure
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <!-- MEDICINE -->
+        <article class="reminderCard medicineReminder">
+
+          <div class="characterArea medicineCharacter">
+            <div class="characterGlow"></div>
+            <div class="characterPlaceholder">💊</div>
+          </div>
+
+          <div class="reminderContent">
+
+            <div class="reminderTop">
+
+              <div>
+                <span class="reminderCategory">CARE</span>
+                <h4>Medicine</h4>
+              </div>
+
+              <label class="switch">
+                <input type="checkbox" class="futureToggle">
+                <span></span>
+              </label>
+
+            </div>
+
+            <p class="reminderDescription">
+              Keep important routines close.
+            </p>
+
+            <div class="reminderMeta">
+              <span>💊 Medication</span>
+              <span>Not configured</span>
+            </div>
+
+            <button class="editButton futureButton">
+              Configure
+            </button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- BOTTOM EXPERIENCE -->
+    <section class="experienceGrid">
+
+      <div class="experienceCard">
+
+        <div class="experienceIcon">🧚</div>
+
+        <div>
+          <span class="eyebrow">LITTLE COMPANIONS</span>
+          <h3>Every reminder has a personality.</h3>
+          <p>
+            Your reminders aren't just notifications.
+            Each one will have its own little companion,
+            animation and way of reminding you.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="experienceCard actionsCard">
+
+        <span class="eyebrow">TEST THE EXPERIENCE</span>
+
+        <div class="actionButtons">
+          <button id="preview" class="primary big">
+            Preview Companion
+          </button>
+
+          <button id="testMinute" class="secondary big">
+            Test in 1 Minute
+          </button>
+        </div>
+
+        <div id="status" class="status">
+          Loading your reminders…
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WATER EDIT PANEL -->
+    <section id="waterSettings" class="editPanel hidden">
+
+      <div class="panelHeader">
+
+        <div>
+          <span class="eyebrow">WATER REMINDER</span>
+          <h3>Water Schedule</h3>
+        </div>
+
+        <button id="closeWaterSettings" class="closeButton">
+          ×
+        </button>
+
+      </div>
+
+
+      <div class="fields">
+
+        <label>
+          First reminder
+          <input id="firstReminderTime" type="time">
+        </label>
+
+        <label>
+          Repeat every
+          <select id="interval">
+            <option value="60">1 hour</option>
+            <option value="90">90 minutes</option>
+            <option value="120">2 hours</option>
+            <option value="180">3 hours</option>
+          </select>
+        </label>
+
+        <label>
+          Active from
+          <input id="start" type="time">
+        </label>
+
+        <label>
+          Active until
+          <input id="end" type="time">
+        </label>
+
+        <label>
+          Snooze
+          <select id="snooze">
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+          </select>
+        </label>
+
+      </div>
+
+
+      <div class="panelBottom">
+
+        <label class="check">
+          <input id="startup" type="checkbox">
+          <span>Start with Windows</span>
+        </label>
+
+        <button id="save" class="primary">
+          Save Water Schedule
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="renderer.js"></script>
+
+</body>
+</html>
