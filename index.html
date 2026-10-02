@@ -498,6 +498,77 @@
 
     </section>
 
+
+    <!-- FOOD EDIT PANEL -->
+    <section id="foodSettings" class="editPanel hidden">
+
+      <div class="panelHeader">
+
+        <div>
+          <span class="eyebrow">FOOD REMINDER</span>
+          <h3>Food Schedule</h3>
+        </div>
+
+        <button id="closeFoodSettings" class="closeButton">
+          ×
+        </button>
+
+      </div>
+
+
+      <div class="fields">
+
+        <label>
+          First meal reminder
+          <input id="firstFoodReminderTime" type="time">
+        </label>
+
+        <label>
+          Repeat every
+          <select id="foodInterval">
+            <option value="120">2 hours</option>
+            <option value="180">3 hours</option>
+            <option value="240">4 hours</option>
+            <option value="300">5 hours</option>
+          </select>
+        </label>
+
+        <label>
+          Active from
+          <input id="foodStart" type="time">
+        </label>
+
+        <label>
+          Active until
+          <input id="foodEnd" type="time">
+        </label>
+
+        <label>
+          Snooze
+          <select id="foodSnooze">
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+          </select>
+        </label>
+
+      </div>
+
+
+      <div class="panelBottom">
+
+        <button id="previewFood" class="secondary">
+          Preview Food Companion
+        </button>
+
+        <button id="saveFood" class="primary">
+          Save Food Schedule
+        </button>
+
+      </div>
+
+    </section>
+
   </main>
 
 </div>
